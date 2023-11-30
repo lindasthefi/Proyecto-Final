@@ -9,7 +9,7 @@ class usuario(db.Model):
     id=db.Column(db.Integer, primary_key=True)
     nombre=db.Column(db.String(50))
     coordenadas=db.Column(db.String(50))
-    descripcion=db.Column(db.String(5000))
+    descripcion=db.Column(db.String(500))
     
     #método constructor
     def __init__(self, nombre, coordenadas,descripcion):

@@ -10,7 +10,7 @@ class Programa:
         db.init_app(self.app)
         
 
-        self.app.add_url_rule('/', view_func=self.buscarTodos)
+        self.app.add_url_rule('/', view_func=self.mostrarTodos)
         self.app.add_url_rule('/nuevo', view_func=self.agregar, methods=["GET", "POST"])
 
         #Iniciar el servisor
@@ -21,7 +21,7 @@ class Programa:
 
 
     def mostrarTodos(self):
-        return render_template('mostrarTodos.html', usurios2=usuario.query.all())
+        return render_template('mostrarTodos.html', usuarios2=usuario.query.all())
 
 
     def agregar(self):
