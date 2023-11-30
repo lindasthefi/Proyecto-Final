@@ -20,7 +20,7 @@ class Programa:
 
 
 
-    def buscarTodos(self):
+    def mostrarTodos(self):
         return render_template('mostrarTodos.html', usurios2=usuario.query.all())
 
 
@@ -38,7 +38,7 @@ class Programa:
             db.session.add(miUsuario)
             db.session.commit()
 
-            return redirect(url_for('buscarTodos'))
+            return redirect(url_for('mostrarTodos'))
 
         return render_template('baseDatos.html')
     
